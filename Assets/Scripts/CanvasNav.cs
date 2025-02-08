@@ -1,3 +1,5 @@
+// Deja hang
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class CanvasNav : MonoBehaviour
 {
-    [SerializeField]
 
     public void LoadNextScene(int aIDX)
     {
@@ -14,6 +15,7 @@ public class CanvasNav : MonoBehaviour
 
     public void LoadStartScene()
     {
+        GameManager.Instance.ResetScore();
         LoadNextScene(0);
     }
 }
